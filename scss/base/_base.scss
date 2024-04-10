@@ -1,0 +1,113 @@
+@import "./../base/vars";
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    margin: 0;
+    height: 100%;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 113.26px;
+    pointer-events: none;
+}
+h2 {
+    font-weight: 200;
+    font-size: 70px;
+    pointer-events: none;
+}
+h3 {
+    font-weight: 300;
+    font-size: 50px;
+    pointer-events: none;
+}
+h4 {
+    font-weight: 400;
+    font-size: 22px;
+    pointer-events: none;
+}
+h5 {
+    font-weight: 400;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+p {
+    font-size: 16px;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+span {
+    display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ==================== General Buttons ==================== */
+.transparent_button {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16.53px;
+    letter-spacing: 3.2px;
+    padding: 14px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: ease-in-out 0.2s;
+    height: auto;
+    max-height: 50px;
+    width: 100%;
+    max-width: 250px;
+
+    &:hover {
+        color: $black;
+        background-color: $white;
+    }
+}
+
+/* ==================== General Wrappers ==================== */
+.main_content {
+    flex: 1 1 auto;
+    padding: 0;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+.inner_wrap {
+    display: block;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}

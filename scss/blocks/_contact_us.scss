@@ -1,0 +1,61 @@
+@import "./../base/vars";
+
+.contact_us {
+    background: url("../../img/page-home/section_welcome/bg.png") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    max-height: 1080px;
+
+    .contact_us_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 0;
+        height: 100%;
+        text-align: center;
+
+        h1{
+            color: $white;
+            margin: 0 0 53px 0;
+            line-height: 1.04;
+        }
+        p{
+            color: $white;
+            margin: 0 0 50px 0;
+        }
+        a{
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (max-width: $laptop) {
+    .contact_us{
+      padding: 0 30px;
+  
+        .contact_us_content{
+            h1{
+                font-size: 75px;
+                font-weight: 200;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $mobile) {
+    .contact_us{
+        max-height: 844px;
+        
+        .contact_us_content{
+            h1{
+                font-size: 50px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+}

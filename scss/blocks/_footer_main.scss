@@ -1,0 +1,189 @@
+@import "./../base/vars";
+
+.footer_main {
+    background-color: $green-general;
+    position: relative;
+    height: 100vh;
+    max-height: 50px;
+    z-index: 2;
+
+    .footer_main_content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        .footer_main_menu{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            .footer_main_menu_logo{
+                margin: 0 30px 0 0;
+
+                img{
+                  max-width: 22px;
+                  max-height: 22px;
+                }
+            }
+            .footer_main_menu_list{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    li{
+                        a{
+                            color: $white;
+                            font-size: 12px;
+                            padding: 0 20px;
+                            transition: ease-in-out 0.2s;
+
+                            &:hover{
+                              color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer_main_links{
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+          
+                li {
+                  a {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 20px;
+          
+                    img {
+                      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(104deg) brightness(103%) contrast(103%);
+                      max-width: 24px;
+                      max-height: 18px;
+                      transition: ease-in-out 0.2s;
+                    }
+          
+                    &:hover {
+                      img {
+                        filter: brightness(0) saturate(100%)
+                      }
+                    }
+                  }
+                }
+              }
+        }
+        .footer_main_copyright{
+            margin: 0 0 0 205px;
+            
+            p{
+                color: $white;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $desktop) {
+  .footer_main{
+    .footer_main_content{
+      .footer_main_menu{
+        .footer_main_menu_list{
+          ul{
+            li{
+              a{
+                font-size: 10px;
+                padding: 0 10px;
+              }
+            }
+          }
+        }
+      }
+      .footer_main_links{
+        ul{
+          li{
+            a{
+              padding: 15px 15px;
+            }
+          }
+        }
+      }
+      .footer_main_copyright{
+        margin: 0 0 0 110px;
+
+        p{
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $laptop) {
+  .footer_main{
+    padding: 0 30px;
+
+    .footer_main_content{
+      padding: 14px 0;
+
+      .footer_main_menu{
+        width: 100%;
+
+        .footer_main_menu_list{
+          ul{
+            li{
+              a{
+                font-size: 7px;
+                padding: 0 10px;
+              }
+            }
+          }
+        }
+      }
+      .footer_main_links{
+        display: none;
+        width: 0;
+      }
+      .footer_main_copyright{
+        margin: 0;
+        width: 130px;
+
+        p{
+          font-size: 6px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .footer_main{
+    padding: 0 20px;
+    
+      .footer_main_content{
+          .footer_main_menu{
+            .footer_main_menu_logo{
+              margin: 0 10px 0 0;
+            }
+            .footer_main_menu_list{
+              ul{
+                li{
+                  a{
+
+                  }
+                }
+              }
+            }
+
+          }
+          .footer_main_links{}
+          .footer_main_copyright{}
+      }
+  }
+}

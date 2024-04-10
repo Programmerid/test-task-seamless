@@ -1,0 +1,184 @@
+.popup_contact_us{
+    background: url("../../img/page-home/section_about_us/bg.png") no-repeat center;
+    background-size: cover;
+    background-color: $green-dark;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 5;
+    display: none;
+
+    &.active{
+        display: flex;
+    }
+
+    .popup_contact_us_close{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        img{
+            filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(0%) hue-rotate(213deg) brightness(109%) contrast(101%);
+            max-height: 48px;
+            max-width: 48px;
+            rotate: 0;
+            transition: ease-in-out 0.3s;
+
+            &:hover{
+                rotate: 180deg;
+            }
+        }
+    }
+
+    .popup_contact_us_content{
+        background-color: $green-dark;
+        margin: 0 auto;
+        padding: 35px 100px 100px 100px;
+        width: 100%;
+        max-width: 1137px;
+
+        #contact_us_form{
+            .contact_us_form_title{
+                margin: 0 0 35px 0;
+                width: 100%;
+
+                h2{
+                    color: $white;
+                    margin: 0 0 10px 0;
+                    text-align: center;
+                    width: 100%;
+                }
+                p{
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+            .contact_us_form_name,
+            .contact_us_form_email{
+                background-color: transparent;
+                border-bottom: 1px solid $green-general;
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+                margin: 0 0 30px 0;
+                padding: 5px 0;
+                text-align: left;
+                text-transform: uppercase;
+                width: 100%;
+                transition: ease-in-out 0.2s;
+
+                &:hover{
+                    border-bottom: 1px solid #099d80;
+                }
+            }
+            .contact_us_form_name::placeholder{
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            .contact_us_form_email::placeholder{
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            textarea::placeholder{
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            textarea:focus-visible{
+                outline: none;
+            }
+
+            textarea{
+                background-color: transparent;
+                border: 1px solid $green-general;
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 15px 20px;
+                margin: 18px 0 38px 0;
+                min-height: 115px;
+                text-align: left;
+                text-transform: uppercase;
+                width: 100%;
+                transition: ease-in-out 0.2s;
+                resize: none;
+
+                &:hover{
+                    border: 1px solid #099d80;
+                }
+            }
+            .contact_us_form_bottom{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .contact_us_form_agreements{
+                    .contact_us_form_agreements_content{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin: 0 0 25px 0;
+
+                        input{
+                            background-color: transparent;
+                            border: 1px solid $green-general;
+                            cursor: pointer;
+                            margin: 0 20px 0 0;
+                            height: 30px;
+                            width: 30px;
+                        }
+                        .contact_us_form_agreements_content_text{
+                            p{
+                                color: $green-general;
+                                font-size: 16px;
+                                font-weight: 500;
+
+                                a{
+                                    display: inline-block;
+                                    color: $green-general;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+                .contact_us_form_bbutton{
+                    .contact_us_form_btn{
+                        background-color: $green-general;
+                        border: 2px solid $green-general;
+                        color: $green-dark;
+                        font-size: 16px;
+                        font-weight: 400;
+                        padding: 14px 101px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        transition: ease-in-out 0.2s;
+
+                        &:hover{
+                            background-color: transparent;
+                            color: $green-general;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

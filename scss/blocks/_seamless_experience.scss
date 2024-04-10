@@ -1,0 +1,114 @@
+@import "./../base/vars";
+
+.seamless_experience {
+    background-color: $black;
+    padding: 171px 0 0 0;
+    position: relative;
+    height: 100vh;
+    max-height: 936px;
+
+    &.active{
+        max-height: none;
+    }
+
+    &::before{
+        background: url("../../img/page-home/section_seamless_experience/bg-bottom.png") no-repeat center;
+        background-size: cover;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -338px;
+        height: 100%;
+        max-height: 339px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .seamless_experience_content{
+        margin: 0 auto 46px auto;
+        width: 100%;
+        max-width: 950px;
+        text-align: center;
+
+        h2{
+            color: $white;
+            margin: 0 0 105px 0;
+            text-align: center;
+        }
+        h5{
+            color: $white;
+            font-size: 25px;
+            font-weight: 300;
+            margin: 0 0 35px 0;
+            text-align: center;
+        }
+        p{
+            color: $green-general;
+            font-size: 16px;
+            margin: 0 0 47px 0;
+            text-align: center;
+        }
+        .seamless_experience_load_more_btn{
+            border-bottom: 1px solid $green-general;
+            color: $green-general;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            margin: 50px auto 48px auto;
+            text-align: center;
+            transition: ease-in-out 0.2s;
+
+            &:hover{
+                border-bottom: 1px solid transparent;
+            }
+
+            &.clicked{
+                display: none;
+            }
+        }
+        .seamless_experience_content_list_extra{
+            display: none;
+            transition: ease-in-out 0.2s;
+
+            &.active{
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $laptop) {
+    .seamless_experience{
+        padding: 150px 30px 0 30px;
+
+        .seamless_experience_content{
+            h2{
+                font-size: 50px;
+            }
+            h5{
+                font-size: 18px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $mobile) {
+    .seamless_experience{
+        &::before{
+            bottom: -240px;
+        }
+        .seamless_experience_content{
+            h2{
+                font-size: 30px;
+            }
+            h5{
+                font-size: 13px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+}

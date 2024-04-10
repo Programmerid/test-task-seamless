@@ -1,0 +1,134 @@
+@import "./../base/vars";
+
+.footer_fixed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 50px;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+
+  .footer_fixed_content {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding: 15px 20px;
+
+          img {
+            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(104deg) brightness(103%) contrast(103%);
+            max-width: 24px;
+            max-height: 18px;
+            transition: ease-in-out 0.1s;
+          }
+
+          &:hover {
+            img {
+              filter: brightness(0) saturate(100%) invert(82%) sepia(48%) saturate(5598%) hue-rotate(120deg) brightness(103%) contrast(96%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .cookies{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 62px 50px 50px;
+    background-color: $green-general;
+    max-width: 350px;
+    max-height: 350px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+    p{
+      color: $white;
+      font-size: 13px;
+      line-height: 1.23;
+      letter-spacing: 0px;
+      margin: 0 0 36px 0;
+      text-align: center;
+
+      a{
+        display: inline-block;
+        color: $white;
+        cursor: pointer;
+        text-decoration: underline;
+        transition: ease-in-out 0.2s;
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    >a{
+      background-color: $white;
+      border: 2px solid $white;
+      color: $green-general;
+      font-size: 16px;
+      letter-spacing: 3px;
+      margin: 0 0 20px 0;
+      padding: 13.5px 10px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      max-height: 50px;
+      transition: ease-in-out 0.2s;
+
+      &:hover{
+        background-color: transparent;
+        color: $white;
+      }
+
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $desktop){
+  .footer_fixed{
+    .footer_fixed_content{
+      ul{
+        li{
+          a{
+            padding: 15px 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $mobile){
+  .footer_fixed{
+    .footer_fixed_content{
+      .cookies{
+        right: calc(50% - 175px);
+        bottom: 70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import "./../base/vars";
+
+.accolades_rankings {
+    background: url("../../img/page-home/section_welcome/bg.png") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    max-height: 1080px;
+    padding: 100px 0;
+
+    .accolades_rankings_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 30px;
+        height: 100%;
+
+        h2{
+            color: $white;
+            margin: 76px 0 44px 0;
+        }
+        p{
+            color: $white;
+            font-size: 16px;
+            margin: 0 0 180px 0;
+        }
+        .accolades_rankings_slider{
+            margin: 0 auto;
+            max-width: 1200px;
+            z-index: 0;
+
+            // wrapper
+            .owl-stage-outer{
+                .owl-stage{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            // item
+            .item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                img{
+                    max-width: 110px;
+                    max-height: 110px;
+                }
+            }
+
+            // navigation
+            .owl-dots{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin: 80px 0 0 0;
+                position: relative;
+                left: -10%;
+                width: 120%;
+
+                .owl-dot{
+                    padding: 20px 0 !important;
+                    width: 100%;
+
+                    &:hover{
+                        span{
+                            background-color: #aaa;
+                        }
+                    }
+
+                    span{
+                        background-color: #ccc;
+                        display: block;
+                        height: 2px;
+                        width: 100%;
+                        transition: ease-in-out 0.3s;
+                    }
+
+                    &.active{
+                        span{
+                            background-color: $green-general;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $desktop) {
+    .accolades_rankings{
+        .accolades_rankings_content{
+            .accolades_rankings_slider{
+                .owl-dots{
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $laptop) {
+    .accolades_rankings{
+        max-height: 844px;
+        padding: 0 30px;
+
+        .accolades_rankings_content{
+            padding: 0 30px;
+
+            h2{
+                font-size: 50px;
+                text-align: center;
+            }
+            p{
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $mobile) {
+    .accolades_rankings{
+        max-height: 844px;
+
+        .accolades_rankings_content{
+            h2{
+                font-size: 30px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+}

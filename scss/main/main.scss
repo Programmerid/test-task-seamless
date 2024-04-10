@@ -1,0 +1,29 @@
+// === Base
+@import "./../base/reset";
+@import "./../base/vars";
+@import "./../base/base";
+
+// === Fonts Global
+@import "./../base/fonts";
+
+// === Header Block
+@import "./../blocks/header";
+
+// === Footer Blocks
+@import "./../blocks/footer_fixed";
+
+// === Main Page Blocks
+@import "./../blocks/welcome";
+@import "./../blocks/about_us";
+@import "./../blocks/contact_us";
+@import "./../blocks/key_words";
+@import "./../blocks/accolades_rankings";
+@import "./../blocks/seamless_experience";
+@import "./../blocks/our_story";
+@import "./../blocks/footer_main";
+
+// PopUp
+@import "./../popup/contact_us";
+
+// === Page Article
+// @import "./../blocks/article";
