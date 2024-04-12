@@ -7,6 +7,15 @@
     max-height: 1080px;
     padding: 100px 0;
 
+    .welcome_video_bg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: auto;
+        z-index: 0;
+      }
+
     .accolades_rankings_content{
         display: flex;
         flex-direction: column;
@@ -14,6 +23,8 @@
         justify-content: flex-start;
         padding: 100px 30px;
         height: 100%;
+        position: relative;
+        z-index: 1;
 
         h2{
             color: $white;

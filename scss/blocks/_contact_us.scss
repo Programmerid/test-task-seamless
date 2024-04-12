@@ -1,10 +1,17 @@
 @import "./../base/vars";
 
 .contact_us {
-    background: url("../../img/page-home/section_welcome/bg.png") no-repeat center;
-    background-size: cover;
     height: 100vh;
     max-height: 1080px;
+
+    .welcome_video_bg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: auto;
+        z-index: 0;
+      }
 
     .contact_us_content{
         display: flex;
@@ -14,6 +21,8 @@
         padding: 100px 0;
         height: 100%;
         text-align: center;
+        position: relative;
+        z-index: 1;
 
         h1{
             color: $white;
