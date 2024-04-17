@@ -7,20 +7,6 @@ window.addEventListener('scroll', function() {
     }
 })
 
-// Slider brands
-$('.accolades_rankings_slider').owlCarousel({
-  margin:50,
-  items:5,
-  loop: false,
-  dots: true,
-  nav:false,
-  responsive:{
-      0:{items:1},
-      768:{items:3},
-      1000:{items:5}
-  }
-})
-
 $('.key_words_content').owlCarousel({
   margin:50,
   loop: false,

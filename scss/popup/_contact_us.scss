@@ -39,7 +39,7 @@
         background-color: $green-dark;
         margin: 0 auto;
         padding: 35px 100px 100px 100px;
-        width: 100%;
+        width: 95%;
         max-width: 1137px;
 
         #contact_us_form{
@@ -100,7 +100,6 @@
             textarea:focus-visible{
                 outline: none;
             }
-
             textarea{
                 background-color: transparent;
                 border: 1px solid $green-general;
@@ -128,6 +127,8 @@
                 width: 100%;
 
                 .contact_us_form_agreements{
+                    margin: 0 10px 0 0;
+
                     .contact_us_form_agreements_content{
                         display: flex;
                         flex-direction: row;
@@ -140,8 +141,10 @@
                             border: 1px solid $green-general;
                             cursor: pointer;
                             margin: 0 20px 0 0;
-                            height: 30px;
-                            width: 30px;
+                            outline: none;
+                            box-shadow: none;
+                            min-height: 30px;
+                            min-width: 30px;
                         }
                         .contact_us_form_agreements_content_text{
                             p{
@@ -160,14 +163,16 @@
                         }
                     }
                 }
-                .contact_us_form_bbutton{
+                .contact_us_form_button{
                     .contact_us_form_btn{
                         background-color: $green-general;
                         border: 2px solid $green-general;
                         color: $green-dark;
                         font-size: 16px;
                         font-weight: 400;
+                        letter-spacing: 3px;
                         padding: 14px 101px;
+                        max-width: 250px;
                         text-transform: uppercase;
                         text-align: center;
                         transition: ease-in-out 0.2s;
@@ -176,6 +181,105 @@
                             background-color: transparent;
                             color: $green-general;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $laptop){
+    .popup_contact_us{
+        .popup_contact_us_content{
+            form#contact_us_form{
+                .contact_us_form_title{
+                    h2{
+                        font-size: 50px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+                .contact_us_form_name,
+                .contact_us_form_email{
+                    font-size: 14px;
+                }
+                .contact_us_form_name::placeholder,
+                .contact_us_form_email::placeholder{
+                    font-size: 14px;
+                }
+                textarea{
+                    font-size: 14px;
+                }
+                textarea::placeholder{
+                    font-size: 14px;
+                }
+                .contact_us_form_bottom{
+                    flex-direction: column;
+
+                    .contact_us_form_agreements{
+                        .contact_us_form_agreements_content{
+                            .contact_us_form_agreements_content_text{
+                                p{
+                                    font-size: 13px;
+                                }
+                                a{
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                    .contact_us_form_button{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $tablet){
+    .popup_contact_us{
+        .popup_contact_us_content{
+            padding: 40px 30px;
+            width: 90%;
+
+            form#contact_us_form{
+                .contact_us_form_title{
+                    h2{
+                        font-size: 30px;
+                    }
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                .contact_us_form_name,
+                .contact_us_form_email{
+                    font-size: 11px;
+                }
+                .contact_us_form_name::placeholder,
+                .contact_us_form_email::placeholder{
+                    font-size: 11px;
+                }
+                textarea{
+                    font-size: 11px;
+                }
+                textarea::placeholder{
+                    font-size: 11px;
+                }
+                .contact_us_form_bottom{
+                    .contact_us_form_agreements{
+                        .contact_us_form_agreements_content{
+                            .contact_us_form_agreements_content_text{
+                                p{
+                                    font-size: 10px;
+                                }
+                                a{
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .contact_us_form_button{
+                        font-size: 14px;
                     }
                 }
             }
